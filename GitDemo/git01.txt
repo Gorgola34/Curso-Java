@@ -1,2 +1,3 @@
 git 01 txt
 Esto lo hago desde Github
+Verifico que tengo clonado el repo
