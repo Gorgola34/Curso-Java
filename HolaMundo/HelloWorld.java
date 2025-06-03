@@ -6,6 +6,7 @@ public class HelloWorld {
         String grettings="Hola Mundo";
         System.out.println("-------");
         System.out.println(grettings);
+        System.out.println("Hola mundo" +" "+ grettings);
     }
     
 }
