@@ -7,6 +7,7 @@ public class PruebaGit {
         int y=45;
         System.out.println("bienvenido"+ " " +nombre);
         System.out.println(x<y?"SI":"NO");
+        System.out.println(x+y);
 
 
     }
