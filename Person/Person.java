@@ -10,6 +10,7 @@ public class Person {
     // 4 byte- float
     // 8 byte-double
 
+    @SuppressWarnings("unused")
     public static void main(String[] args) {
         String person="Salvador";
         System.out.println("Hola soy una persona llamada"+" "+ person);
