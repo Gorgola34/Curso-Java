@@ -8,9 +8,9 @@ public class Greetings {
         System.out.println("Introduzca nombre: ");
         String name=scanner.nextLine();
         System.out.println("Introduzca edad ");
-        double edad=scanner.nextInt();
+        double age=scanner.nextInt();
         System.out.println("Hola "+ name);
-        System.out.println("Tienes "+ edad+ " Años");
+        System.out.println("Tienes "+ age+ " Años");
         scanner.close();
     }
     
