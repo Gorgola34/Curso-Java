@@ -8,7 +8,7 @@ public class Pipo {
         String name="Pipo";
         double weight=64.6;
         boolean hasHouse=true;
-        Short birthYear=2010;
+        short birthYear=2010;
         char letter='M';
         System.out.println("""
                 Nombre: %s
