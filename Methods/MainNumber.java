@@ -1,5 +1,5 @@
 package Methods;
-public class MinNumber {
+public class MainNumber {
 
     public static void main(String[] args) {
         
