@@ -15,8 +15,7 @@ public class Car {
         this.color=color;
         this.isAuto=isAuto;
         this.type=type;
-
-
+   
     }
     public void ShowInfo(){
         System.out.println("Brand:"+brand);
