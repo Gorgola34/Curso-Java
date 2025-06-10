@@ -11,7 +11,7 @@ public class Car2 {
     boolean isAuto;
     char type;
 
-    public Car2 (int id,int seats,String color,int carDoors,String brand,boolean isAuto,char tyype){
+    public Car2 (int id,int seats,String color,int carDoors,String brand,boolean isAuto,char type){
         this.id=numCar;
         this.seats=seats;
         this.color=color;
