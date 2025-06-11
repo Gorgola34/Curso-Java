@@ -3,11 +3,12 @@ import java.util.*;
 public class Shop {
 
     public static void main(String[] args) {
+        int price=5;
         String[] x={
             "No se puede realizar la venta",
-            "Se te aplica un 5% de descuentoy el coste de envío es de 10 euros/paquete ",
-            "Se te aplica un 10% descuento y coste envío es de 5 euros/paquete",
-            "Se te aplica un 15% descuento y envío gratuito"
+            "Se te aplica un 5% de descuentoy el coste de envío es de 10 euros/paquete " + (5-(price*0.5)+10),
+            "Se te aplica un 10% descuento y coste envío es de 5 euros/paquete" + (5-(price*0.1)+5),
+            "Se te aplica un 15% descuento y envío gratuito " + (5-(price*0.15))
         };
         int index;
         Scanner scanner=new Scanner(System.in);

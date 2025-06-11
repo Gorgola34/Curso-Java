@@ -5,6 +5,7 @@ public class Week {
     public static void main(String[] args) {
         Scanner scanner=new Scanner(System.in);
         int day=scanner.nextInt();
+        scanner.close();
 
         switch(day){
             case 1:
