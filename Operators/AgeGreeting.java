@@ -5,6 +5,7 @@ public class AgeGreeting {
     public static void main(String[] args) {
          if(args.length==0) {
             System.out.println("Se acabo, dime la edad");
+            return;
         }
         int age=Integer.valueOf(args[0]);
         if(age>=0&&age<18){
