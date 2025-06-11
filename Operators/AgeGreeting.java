@@ -10,9 +10,9 @@ public class AgeGreeting {
         int age=Integer.valueOf(args[0]);
         if(age>=0&&age<18){
             System.out.println("Niño");
-        }else if(age>=18&&age<=33){
+        }else if(age>=18&&age<33){
             System.out.println("Joven");
-        }else if(age>=34&&age<65){
+        }else if(age>=33&&age<65){
             System.out.println("Adulto");
         }else{
             System.out.println("Jubilado");
