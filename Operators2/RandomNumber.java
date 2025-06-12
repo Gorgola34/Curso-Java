@@ -1,27 +1,24 @@
 package Operators2;
-import java.util.Scanner;
 import java.util.Random;
+
 public class RandomNumber {
 
-    public static void main(String[] args) {
-        Scanner scanner= new Scanner(System.in);
-        System.out.println("Adivina el numero:" );
-        int number=scanner.nextInt();
+    public static int randomNumber(){
         Random random= new Random();
-        int SecretNumber= random.nextInt(11);
-        scanner.close();
-        System.out.println(SecretNumber);
-       if(SecretNumber==number){
-        System.out.println("Adivinaste el número secreto ");
-       }else{
-        System.out.println("No has adivinado el número secreto, el número es: "+ SecretNumber);
-       }
-       
+        int n=random.nextInt(10);
+        return n;
+    }
+
+    public static void showRandom(int n){
+        System.out.println("El número es: " + n);
 
 
-        
     }
 
 
+    public static void main(String[] args) {
+        showRandom((randomNumber()));
+        
+    }
     
 }

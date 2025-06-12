@@ -14,14 +14,19 @@ public class IsPrimoNumber
             
         }
         return true;
-
     }
 
-    public static void main(String[] args) {
+    public static int scannerBy(){
         Scanner scanner= new Scanner(System.in);
         int n=scanner.nextInt();
         scanner.close();
+        return n;
+    }
+
+    public static void main(String[] args) {
+        int n=scannerBy();
         System.out.println(isPrimo(n));
+        
     }
     
 }
