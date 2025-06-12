@@ -9,6 +9,7 @@ public class RandomNumber {
         int number=scanner.nextInt();
         Random random= new Random();
         int SecretNumber= random.nextInt(11);
+        scanner.close();
         System.out.println(SecretNumber);
        if(SecretNumber==number){
         System.out.println("Adivinaste el número secreto ");

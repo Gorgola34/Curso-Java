@@ -1,6 +1,6 @@
 package Operators2;
 import java.util.Scanner;
-public class IsPar {
+public class IsEven {
 
     public static boolean IsPar(int n){
         if(n%2==0){
@@ -13,6 +13,7 @@ public class IsPar {
     public static void main(String[] args) {
         Scanner scanner= new Scanner(System.in);
         int n=scanner.nextInt();
+        scanner.close();
         System.out.println(IsPar(n));
         
     }

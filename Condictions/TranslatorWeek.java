@@ -6,6 +6,7 @@ public class TranslatorWeek {
         Scanner scanner=new Scanner(System.in);
         System.out.println("Introduce día");
         String day=scanner.nextLine();
+        scanner.close();
         switch(day.toLowerCase()){
             case "lunes":
             System.out.println("Monday");

@@ -1,6 +1,7 @@
 package Operators2;
 import java.util.Scanner;
-public class IsPrimo {
+public class IsPrimoNumber
+ {
 
     public static boolean isPrimo(int n){
         if(n<=1){
@@ -19,6 +20,7 @@ public class IsPrimo {
     public static void main(String[] args) {
         Scanner scanner= new Scanner(System.in);
         int n=scanner.nextInt();
+        scanner.close();
         System.out.println(isPrimo(n));
     }
     

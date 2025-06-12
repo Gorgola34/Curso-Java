@@ -10,6 +10,7 @@ public class Shop {
        int shirtsPackage=scanner.nextInt();
        System.out.println("Dime el numero de pantalones");
        int troussersPackage=scanner.nextInt();
+       scanner.close();
        int totalPackages=shirtsPackage+troussersPackage;
 
        double discount=0;
