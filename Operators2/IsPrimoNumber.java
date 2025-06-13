@@ -2,7 +2,6 @@ package Operators2;
 import java.util.Scanner;
 public class IsPrimoNumber
  {
-
     public static boolean isPrimo(int n){
         if(n<=1){
             return false;
@@ -10,8 +9,7 @@ public class IsPrimoNumber
         for(int i=2;i<=Math.sqrt(n);i++){
             if(n%i==0){
                 return false;
-            }
-            
+            }  
         }
         return true;
     }
@@ -25,8 +23,6 @@ public class IsPrimoNumber
 
     public static void main(String[] args) {
         int n=scannerBy();
-        System.out.println(isPrimo(n));
-        
-    }
-    
+        System.out.println(isPrimo(n));   
+    } 
 }
