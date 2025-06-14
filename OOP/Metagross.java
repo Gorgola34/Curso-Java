@@ -26,7 +26,7 @@ public class Metagross extends Pokemon implements PsiquicoTipo,Acero {
     }
     @Override
     public void puñoMeteoro() {
-        System.out.println("Puño Mateoro");
+        System.out.println("Puño Meteoro");
         
     }
     @Override
