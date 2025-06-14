@@ -1,6 +1,6 @@
 package OOP;
 
-public class Metagross extends Pokemon implements Psiquico,Acero {
+public class Metagross extends Pokemon implements PsiquicoTipo,Acero {
 
     private String type;
     private String type2;
@@ -34,7 +34,9 @@ public class Metagross extends Pokemon implements Psiquico,Acero {
         System.out.println("Psiquico");
     }
     
+    }
+    
 
 
     
-}
+

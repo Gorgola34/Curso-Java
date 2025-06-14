@@ -1,5 +1,5 @@
 package OOP;
-public interface Psiquico {
+public interface PsiquicoTipo {
 
     public void Psiquico();
 
