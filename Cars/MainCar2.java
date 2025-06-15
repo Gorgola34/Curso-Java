@@ -10,6 +10,8 @@ public class MainCar2 {
        c1.showCar();
        System.out.println("---------");
        c2.showCar();
+       System.out.println("---------");
+       c3.showCar();
 
         
     
