@@ -12,10 +12,7 @@ public class RandomNumber {
     public static void showRandom(int n){
         System.out.println("El número es: " + n);
 
-
     }
-
-
     public static void main(String[] args) {
         showRandom((randomNumber()));
         
