@@ -12,6 +12,7 @@ public class Car2 {
     char type;
 
     public Car2 (int id,int seats,String color,int carDoors,String brand,boolean isAuto,char type){
+        numCar++;
         this.id=numCar;
         this.seats=seats;
         this.color=color;
@@ -19,11 +20,11 @@ public class Car2 {
         this.carDoors=carDoors;
         this.isAuto=isAuto;
         this.type=type;
-        numCar=numCar+1;
+        
 
 
     }
-    public void show (){
+    public void showCar (){
 
         System.out.println("Id:"+ id);
         System.out.println("Seats:"+ seats);
