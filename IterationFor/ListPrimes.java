@@ -3,8 +3,10 @@ import java.util.Scanner;
 import java.util.ArrayList;
 public class ListPrimes {
 
-    public static int scannerBy(){
+    public static int scannerBy(String message){
         Scanner scanner=new Scanner(System.in);
+        
+        System.out.println(message);
         int n=scanner.nextInt();
         scanner.close();
         return n;
@@ -34,7 +36,9 @@ public class ListPrimes {
     }
 
     public static void main(String[] args) {
-        int n=scannerBy();
+        String message= "Dime un número para saber si es primo";
+        // int n= NumberPrime.scannerBy(message) Para usar una función de otra clase
+        int n=scannerBy(message);
         System.out.println(isPrime(n));
         ArrayList<Integer> x= calculatePrimes(n);
         for(int primes:x){

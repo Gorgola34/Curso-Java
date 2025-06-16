@@ -18,7 +18,8 @@ public class NumberPrime {
 
 public static int scannerBy(){
     Scanner scanner=new Scanner(System.in);
-    System.out.println("Introduce el número para ver si es Primo o no");
+    String message=("Introduce el número para ver si es Primo o no");
+    System.out.println(message);
     int n=scanner.nextInt();
     scanner.close();
     return n;
