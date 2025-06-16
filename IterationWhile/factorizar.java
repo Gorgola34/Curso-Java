@@ -1,3 +1,4 @@
+package IterationWhile;
 import java.util.Scanner;
 public class factorizar {
 
