@@ -1,5 +1,6 @@
 package MasIteraciones;
 import java.util.Scanner;
+import java.util.Random;
 public class MatrixUser {
 
     public static String scannerBy(){
@@ -26,13 +27,26 @@ public class MatrixUser {
             }
         }
     }
-    public static void main(String[] args) {
-        show();
+
+    public static String[] selectRadoms(String[][] animals){
+        String[] selectedanimals=new String[animals.length];
+        for(int i=0;i<selectedanimals.length;i++){
+            Random random=new Random();
+            random.nextInt(3);
+            selectedanimals[i]=animals[i][random.nextInt(2)];
+        }
+        return selectedanimals;
+
 
     }
+    public static void main(String[] args) {
+        show();
+            }
+        }
+    
         
         
-    }
+    
 
 
     

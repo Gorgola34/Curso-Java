@@ -15,12 +15,9 @@ public class BucleWhile {
                 continue;
             }
             System.out.printf("Número %s = %s", i, number);
-            
             System.out.println("Número" + number);
             if(number== 7){
-                sentinel=false;
-                
-               
+                sentinel=false;  
             }
          }
 
@@ -38,14 +35,12 @@ public class BucleWhile {
 
         int number=0;
         
-
         for(int i=0;i!=7; i++){
             Random random= new Random();
             number= random.nextInt(9);
             if(number%2==0){
                 continue;
-            }
-            
+            }   
         }
         }
         public static void main(String[] args) {
@@ -56,10 +51,7 @@ public class BucleWhile {
             sample.charAt(2);
             // sample.
 
-            String [] samples;
-            
-
-            
+            String [] samples;  
         }
     }
 
