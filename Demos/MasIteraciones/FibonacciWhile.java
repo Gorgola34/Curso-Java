@@ -8,7 +8,7 @@ public class FibonacciWhile {
 
     public static int scannerBy(){
         Scanner scanner= new Scanner(System.in);
-        System.out.println("Introduce el número de terminos deseado, máximo: " + max + " " + "términos" );
+        System.out.println("Introduce el número");
         int numberTerms=scanner.nextInt();
         scanner.close();
         return numberTerms;
