@@ -1,4 +1,4 @@
-package base.Game;
+package Game;
 
 public class Character {
 
