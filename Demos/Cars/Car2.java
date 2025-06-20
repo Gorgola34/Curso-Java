@@ -21,8 +21,6 @@ public class Car2 {
         this.isAuto=isAuto;
         this.type=type;
         
-
-
     }
     public void showCar (){
 
