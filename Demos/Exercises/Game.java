@@ -22,9 +22,9 @@ public class Game {
             ((option==0&&computer==2)||
             (option==1&&computer==0)||
             (option==2&&computer==1)){
-
-            }else{
                 System.out.println("Ganaste");
+            }else{
+                System.out.println("Perdiste");
             }
 
             System.out.println("¿Quieres continuar?");
