@@ -3,37 +3,38 @@ import java.util.*;
 public class Game {
 
     public static void main(String[] args) {
+        boolean want=true;
+        Scanner scanner= new Scanner(System.in);
+        Random random = new Random();
 
-        Scanner scanner=new Scanner(System.in);
-        Random random= new Random();
-        String[] game={"Piedra","Papel","Tijeras"};
-        System.out.println("Piedra=0, Papel=1.Tijeras=2");
-        int user=scanner.nextInt();
-        int computer=random.nextInt(3);
-        System.out.println("Tu elegiste: " + game[user]);
-        System.out.println("La computadora eligió: " + game[computer]);
+        while(want){
+            String [] options={"Piedra", "Papel", "Tijeras"};
+            System.out.println("0=Piedra, 1=Papel, 2= Tijeras");
+            int option=scanner.nextInt();
+            scanner.nextLine();
+            int computer=random.nextInt(3);
+            System.out.println("Elegiste " + options[option]);
+            System.out.println("La computadora eligió " + options[computer]);
 
-        if(user==computer){
-            System.out.println("Empate");
-        }else if
-        ((user==0&&computer==2)||
-        (user==1&&computer==0)||
-        (user==2&&computer==1)){
-            System.out.println("Ganaste");
+            if(option==computer){
+                System.out.println("Empate");
+            }else if
+            ((option==0&&computer==2)||
+            (option==1&&computer==0)||
+            (option==2&&computer==1)){
 
-        }else{
-            System.out.println("Perdiste");
+            }else{
+                System.out.println("Ganaste");
+            }
+
+            System.out.println("¿Quieres continuar?");
+            String answer=scanner.nextLine();
+            if(answer.equals("n")||(answer.equals("no"))){
+                want=false;
+            }
+            }
+            System.out.println("Gracias por jugar");
         }
-         scanner.close();
-         
-        }
-
-
-       
-            
-
-        }
-
-
-        
+    }
+    
 
