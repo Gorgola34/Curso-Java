@@ -2,7 +2,7 @@ package Demos.OOP;
 import java.util.ArrayList;
 
 public class Book {
-    public static int idb=0;
+    public static int num=0;
     public static ArrayList<Book> listBook=new ArrayList<>();
     int id;
     String title;
@@ -10,8 +10,8 @@ public class Book {
     int year;
 
     public Book(String title,String author,int year){
-        idb++;
-        this.id=idb;
+        num++;
+        this.id=num;
         this.title=title;
         this.author=author;
         this.year=year;
@@ -19,7 +19,10 @@ public class Book {
     }
     public static void show(){
         for(Book b:listBook){
+            System.out.println(b.id);
+            System.out.println(b.author);
             System.out.println(b.title);
+            System.out.println(b.year);
         }
     }
    
