@@ -2,19 +2,30 @@ package Game;
 
 public class MainCharacter {
 
-    public static void main(String[] args) {
-        Character c1= new Character("Miira",Species.ELFO,200.5,300,Role.MAGO,false);
-        Character c2= new Character("Ganon",Species.ORCO,3000.6,800,Role.GUERRERO,true);
-        c1.setName("Sheikaa");
-        c1.showInfo();
-        System.out.println();
-        c2.showInfo();
-        Character.showCharacter();
+
+public class App {
+
+
+    static void prepareGame() {
+        Character char1 = new Character("Pepe", Species.ELFO, 100, 50, Role.MAGO, false);
+        char1.showCharacter();
+        Character char2 = new Character("Pepe", Species.ORCO, 120, 500, Role.PEON, false);
+        char2.showCharacter();
         
-        
-       
-       
-       
+        char1.renameInvalidCharacters("Elfo Pepe");
+
+        Character.showList();
+        char2.renameInvalidCharacters("Orco Pepe");
+        char2.showCharacter();
+        Character.showList();
     }
+
+    public static void main(String[] args) {
+
+        // playWithPersons();
+        prepareGame();
+
+    }
+}
 
 }

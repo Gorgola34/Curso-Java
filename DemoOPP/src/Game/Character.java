@@ -1,62 +1,95 @@
 package Game;
 
 import java.util.ArrayList;
+import java.util.List;
 import java.util.UUID;
 
-public class Character{
+//  Crea la clase Character con las propiedades    
+//  name -> String
+//  species -> char 
+//  life -> int
+//  strength -> int
+//  role -> String
+//  isZombi -> boolean
+
+// Añade un método showCharacter para mostrar la información
 
 
-    private static ArrayList<Character> characterList=new ArrayList<>();
+public class Character {
 
-    public static void showCharacter(){
-        for(Character character:characterList){
+    private static List<Character> characters = new ArrayList<Character>(); 
+
+    public static void showList() {
+        for (Character character : characters) {
             System.out.println(character.name);
         }
     }
 
+    private static boolean isRepeatedName(String name) {
+        for (Character character : characters) {
+            if(character.name.equals(name)) {
+                return true;
+            }
+        }
+        return false;
+    }
 
-    private UUID id;
+    private UUID id; 
     private String name;
-    private Species specie;
-    private double hp;
-    private int strenght;
+    private Species species;
+    // private Species species;
+    private int life; 
+    private int strength;
     private Role role;
-    private  boolean isZombie;
+    private boolean isZombi;
+    
+    public Character(String name, Species species, int life, int strength, Role role, boolean isZombi) {
+        this.id = UUID.randomUUID();
+        this.name = name;
+        this.species = species;
+        this.life = life;
+        this.strength = strength;
+        this.role = role;
+        this.isZombi = isZombi;
 
-    public Character(String name, Species specie, double hp, int strenght, Role roll, boolean isZombie){
-        
-       
-        this.id=UUID.randomUUID();
-        this.name=name;
-        this.specie=specie;
-        this.hp=hp;
-        this.strenght=strenght;
-        this.role=roll;
-        this.isZombie=isZombie;
-
-        characterList.add(this);
-        
-
+        if(isRepeatedName(this.name)) {
+            System.err.println("Error, nombre repetido: renombra el personaje");
+            return;
+        }
+        characters.add(this);
     }
 
-    public void showInfo(){
-        String messageZombie= isZombie? "Es un zombie":"No es un zombie";
-        System.out.println("""
-            Id:       %s
-            Name:     %s
-            Specie:   %s
-            Hp:       %s
-            Strenght: %s
-            Roll:     %s
-            ¿Es zombie?: %s
-                
-                """.formatted(id,name,specie, hp, strenght, role, messageZombie));
-    }
-    public void setName(String name2){
-        name=name2;
+    public void renameInvalidCharacters(String name) {
+        if (characters.contains(this)) {
+            System.err.println("Invalid name");
+            return;
+        };
+        this.name = name;
+        characters.add(this);
     }
 
-
-
+    public void showCharacter () {
+        String zombiMessage = isZombi ? "Es un zombi" : "NO es un zombi";
+        String message = """
+        ==================
+        Ficha de %s
+        ================== 
+        Id: %s       
+        Especie: %s
+        Role: %s
+        Vida: %s
+        Fuerza: %s
+        %s 
+        """; 
+        System.out.println("");
+        System.out.println(message.formatted(name,
+        id, 
+        species.toString().toLowerCase(), 
+        role.toString().toLowerCase(),
+        life, strength, zombiMessage));
+    }
 
 }
+
+
+
