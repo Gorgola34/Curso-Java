@@ -7,7 +7,8 @@ public class Metagross extends Pokemon implements PsiquicoTipo,Acero {
     private String hability;
 
 
-    public Metagross(){
+    public Metagross(int id,String name){
+        super(id,name);
         type="Acero";
         type2="Psíquico";
         hability="Cuerpo puro";

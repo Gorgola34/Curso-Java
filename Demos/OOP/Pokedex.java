@@ -2,7 +2,7 @@ package Demos.OOP;
 public class Pokedex {
 
     public static void main(String[] args) {
-        Metagross p1= new Metagross();
+        Metagross p1= new Metagross(376,"Metagross");
         System.out.println(p1.dame_id());
         System.out.println(p1.dame_name());
         System.out.println(p1.dame_type());
