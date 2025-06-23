@@ -28,8 +28,8 @@ public class Fibonacci {
     }
     
     public static void main(String[] args) {
-        int number=scannerBy();
-        fibonacciSequence(number);
+        int numberTerms=scannerBy();
+        fibonacciSequence(numberTerms);
        
         
         
