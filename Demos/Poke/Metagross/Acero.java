@@ -1,4 +1,4 @@
-package Demos.OOP;
+package Demos.Poke.Metagross;
 public interface Acero {
 
 

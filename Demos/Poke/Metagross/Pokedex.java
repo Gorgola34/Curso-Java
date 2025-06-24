@@ -1,4 +1,5 @@
-package Demos.OOP;
+package Demos.Poke.Metagross;
+
 public class Pokedex {
 
     public static void main(String[] args) {

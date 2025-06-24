@@ -1,4 +1,5 @@
-package Demos.OOP;
+package Demos.Poke.Metagross;
+
 public abstract class Pokemon  {
 
    private int id;
