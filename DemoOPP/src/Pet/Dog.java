@@ -4,8 +4,9 @@ public class Dog extends Pet implements eat {
 
     String color;
 
-    public Dog (String name,int age) {
-        super(name, age);
+    public Dog (String name, int age) {
+        super(name,age);
+      
         color="Rojo";
     }
 

@@ -1,10 +1,14 @@
 package OOP;
 
 public class Square {
-    int side;
+    public int side;
 
     public Square(int side) {
         this.side = side;
+    }
+
+    public Square(Square sq){
+        this(sq.side);
     }
 
     @Override
@@ -12,7 +16,17 @@ public class Square {
         return 
         super.toString() + "\n" + "Square {side: %s}".formatted(side);
     }
+    @Override
+    public boolean equals(Object object){
 
-}
+        if(object instanceof Square && this.side==((Square)object).side){
+            return true;
+        }
+        return false;
+        }
+        
+    }
+
+
     
 
