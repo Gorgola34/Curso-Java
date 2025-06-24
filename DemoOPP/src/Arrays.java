@@ -17,6 +17,7 @@ public class Arrays {
 
 
         ArrayList<Integer> list=new ArrayList<>();
+        System.out.println(list);
         
 
     }
