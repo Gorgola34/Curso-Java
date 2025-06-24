@@ -1,20 +1,22 @@
 package Demos.OOP;
 public class Coordinates {
 
-    int x;
-    int y;
-    int z;
+    double x;
+    double y;
+    double z;
 
-    public Coordinates(int x,int y,int z){
+    public Coordinates(double x, double y, double z){
         this.x=x;
         this.y=y;
         this.z=z;
 
     }
-    public void showCoord(){
-        System.out.println(x);
-        System.out.println(y);
-        System.out.println(z);
+
+    public void show(){
+        System.out.println("""
+                x:   %s
+                y:   %s
+                z:   %s
+                """.formatted(x,y,z));
     }
-    
 }
