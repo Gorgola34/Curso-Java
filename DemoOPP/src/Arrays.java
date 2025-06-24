@@ -3,6 +3,8 @@ public class Arrays {
 
     public static void foo(int[] data){
 
+        int[] newData= data.clone();
+
         data[0]=400;
 
     }
@@ -26,7 +28,7 @@ public class Arrays {
         list.add(34);
         list.add(5);
         list.add(89);
-        
+
         for(int i:list){
             System.out.println(i);
         }
