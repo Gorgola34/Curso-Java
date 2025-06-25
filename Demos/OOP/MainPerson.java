@@ -13,7 +13,7 @@ public class MainPerson {
                    Id:    %s
                    Name:  %s
                    Age:   %s
-                   """.formatted(p.getId(),p.getName(),p.getAge()));;
+                   """.formatted(p.getId(),p.getName(),p.getAge()));
     }
     
     }
