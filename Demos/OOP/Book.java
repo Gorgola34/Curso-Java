@@ -28,7 +28,7 @@ public class Book {
         String seek = scanner.nextLine();
         scanner.close();
         for(Book b:x){
-            if(b.author.equals(seek)){
+            if(b.author.equalsIgnoreCase(seek)){
                 System.out.println(b.title);
                 System.out.println(b.isBorrowed);
             }
@@ -37,21 +37,27 @@ public class Book {
 
     public static boolean lend(){
         for(Book b:x){
-            if(b.isBorrowed=false){
+            if(b.isBorrowed==false){
+                
                 return true;
             }
+            }
+            return false;
+    
         }
-        return false;
-    }
+        
 
     public static boolean returnBook(){
         for(Book b:x){
-            if(b.isBorrowed=true){
-                return true;
+            if(b.isBorrowed==false){
+                return false;
+               
             }
+            
+            }
+            return true;
+    
         }
-        return false;
-    }
 
     public static void show(){
         for(Book b:x){
@@ -68,8 +74,10 @@ public class Book {
         }
     }
 
+}
+
     
 
      
 
-}
+
