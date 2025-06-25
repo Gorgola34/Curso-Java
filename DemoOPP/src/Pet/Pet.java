@@ -1,6 +1,6 @@
 package Pet;
 
-public class Pet {
+public abstract class Pet {
 
     String name;
     int age;
@@ -9,6 +9,16 @@ public class Pet {
        
         this.name=name;
         this.age=age;
+
+    }
+
+    public Pet(String name){
+        this.name=name;
+        this.age=0;
+    }
+
+    public void smile(){
+        System.out.println("Yo sonrio");
 
     }
     

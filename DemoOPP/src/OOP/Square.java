@@ -1,6 +1,6 @@
 package OOP;
 
-public class Square {
+public class Square implements Cloneable {
     public int side;
 
     public Square(int side) {
@@ -24,6 +24,11 @@ public class Square {
         }
         return false;
         }
+
+         @Override
+	 public Object clone() throws CloneNotSupportedException {
+	 return super.clone();
+	 }
         
     }
 

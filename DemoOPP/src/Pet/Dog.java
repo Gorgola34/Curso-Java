@@ -1,6 +1,6 @@
 package Pet;
 
-public class Dog extends Pet implements eat {
+public class Dog extends Pet implements Eating, Sleep,Sound {
 
     String color;
 
@@ -10,14 +10,25 @@ public class Dog extends Pet implements eat {
         color="Rojo";
     }
 
-    protected void sleep(){
-        System.out.println("Estoy durmiendo como un perro");
-    }
 
     @Override
     public void eat() {
        System.out.println("Como como un perro");
     }
+
+
+    @Override
+    public void sleeping() {
+        System.out.println("Hola duermo como un perro");
+    }
+
+
+    @Override
+    public void sound() {
+        System.out.println("guau guau");
+    
    
+}
 
 }
+

@@ -1,6 +1,6 @@
 package Pet;
 
-public interface eat {
+public interface Eating {
 
     public void eat();
 

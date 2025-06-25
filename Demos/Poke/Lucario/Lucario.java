@@ -13,8 +13,6 @@ public class Lucario extends Pokemon implements TipoAcero,TipoLucha {
         type2="Lucha";
         category="Aura";
         hability="Impasible";
-
-
     }
     public String getType1(){
         return type1;
