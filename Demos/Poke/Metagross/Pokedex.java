@@ -8,6 +8,7 @@ public class Pokedex {
         System.out.println(p1.dame_name());
         System.out.println(p1.dame_type());
         System.out.println(p1.dame_type2());
+        System.out.println(p1.getCategory());
         System.out.println(p1.dame_hability());
         System.out.println("\nAtaques:\n");
         p1.Placaje();

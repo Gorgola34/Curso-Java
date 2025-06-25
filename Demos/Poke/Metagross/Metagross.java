@@ -5,13 +5,16 @@ public class Metagross extends Pokemon implements PsiquicoTipo,Acero {
     private String type;
     private String type2;
     private String hability;
+    private String category;
 
 
-    public Metagross(int id,String name){
+    public Metagross(int id, String name){
         super(id,name);
+        
         type="Acero";
         type2="Psíquico";
         hability="Cuerpo puro";
+        category="Pata hierro";
     }
     public String dame_type(){
         return type;
@@ -33,6 +36,9 @@ public class Metagross extends Pokemon implements PsiquicoTipo,Acero {
     @Override
     public void Psiquico() {
         System.out.println("Psiquico");
+    }
+    public String getCategory(){
+        return category;
     }
     
     }

@@ -2,10 +2,10 @@ package Demos.Poke.Lucario;
 
 public class Lucario extends Pokemon implements TipoAcero,TipoLucha {
 
-    String type1;
-    String type2;
-    String category;
-    String hability;
+     private String type1;
+     private String type2;
+     private String category;
+     private String hability;
 
     public Lucario(int id, String name){
         super(id, name);

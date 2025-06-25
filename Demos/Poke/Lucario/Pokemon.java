@@ -1,8 +1,8 @@
 package Demos.Poke.Lucario;
 
 public abstract class Pokemon {
-    int id;
-    String name;
+      private int id;
+     private String name;
 
     public Pokemon(int id,String name){
         this.id=id;
