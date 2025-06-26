@@ -12,11 +12,11 @@ public class factorizar {
         }
         public static int factorizar(int n){
 
-            int factorizar=1;
-            for(int i=factorizar;i<=n;i++){
-                factorizar*=i;
+            int factor=1;
+            for(int i=factor;i<=n;i++){
+                factor*=i;
             }
-            return factorizar;
+            return factor;
 
         }
 
