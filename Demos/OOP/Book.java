@@ -37,27 +37,29 @@ public class Book {
 
     public static boolean lend(){
         for(Book b:x){
-            if(b.isBorrowed==false){
-                
+            if(!b.isBorrowed){
+                b.isBorrowed=true;
                 return true;
             }
+            
             }
             return false;
     
         }
-        
-
+    
     public static boolean returnBook(){
         for(Book b:x){
-            if(b.isBorrowed==false){
-                return false;
+            if(b.isBorrowed){
+                b.isBorrowed=false;
+                 return true;
+            }
+           
                
             }
+            return false;
+    
             
             }
-            return true;
-    
-        }
 
     public static void show(){
         for(Book b:x){
