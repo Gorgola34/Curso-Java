@@ -1,5 +1,14 @@
 package Demos.IterationWhile;
+import java.util.*;
 public class Palindrome2 {
+
+    public static String scannerBy(){
+        Scanner scanner= new Scanner(System.in);
+        String name=scanner.nextLine();
+        scanner.close();
+        return name;
+
+    }
 
     public static String reverse(String name){
         String result="";
@@ -22,7 +31,7 @@ public class Palindrome2 {
     }
 
     public static void main(String[] args) {
-        String name="Oso baboso";
+        String name=scannerBy();
         name=name.toLowerCase();
         String limpio=spaces(name);
         String reverse=reverse(limpio);
