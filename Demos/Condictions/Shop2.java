@@ -1,7 +1,7 @@
 package Demos.Condictions;
 import java.util.Scanner;
 
-public class Shop3 {
+public class Shop2 {
 
 
         

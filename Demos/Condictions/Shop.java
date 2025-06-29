@@ -1,62 +1,62 @@
 package Demos.Condictions;
-import java.util.Scanner;
+import java.util.*;
 public class Shop {
 
+    public static int scannerby(){
+        Scanner scanner= new Scanner(System.in);
+        int packages=scanner.nextInt();
+        return packages;
+
+    }
     public static void main(String[] args) {
-       int priceTroussers=10;
-       int priceShirts=15;
-       Scanner scanner=new Scanner(System.in);
-       System.out.println("Dime el numero de camisetas");
-       int shirtsPackage=scanner.nextInt();
-       System.out.println("Dime el numero de pantalones");
-       int troussersPackage=scanner.nextInt();
-       scanner.close();
-       int totalPackages=shirtsPackage+troussersPackage;
-
-       double discount=0;
-       int shippment=0;
-
-       if(totalPackages<5){
+        int packages=scannerby();
+        int price=5;
+        double discount=0;
+        int shippment=0;
+        if(packages<5){
             System.out.println("No hay venta");
             return;
-       } else if(totalPackages<10){
+        }else if(packages<10){
             discount=0.05;
             shippment=10;
-       } else if(totalPackages<20){
+        }else if(packages<20){
             discount=0.1;
             shippment=5;
-       } else{
+        }else{
             discount=0.15;
-       }
+        }
+        double pricePack=price*packages;
+        double totalShip=packages*shippment;
+        double discountPack=pricePack*discount;
+        double totalPrice=pricePack+totalShip-discountPack;
+        double totalPromotion;
 
-       double totalPrice=(troussersPackage*priceTroussers)+(shirtsPackage*priceShirts);
-       double totalShippment=totalPackages*shippment;
-       double totalDiscount=totalPackages*discount;
-       double fullPrice=totalPrice+totalShippment+totalDiscount;
+        if(totalPrice>1000){
+            discount=0.1;
+             totalPromotion=totalPrice -(totalPrice*discount);
+             System.out.println("""
+                PAGAR     %s
+                ENVIO     %S
+                DESCUENTO %S
+                ----------------
+                TOTAL      %s
+                ----------------
+                TOTAL PROMOCION  %s
+                """.formatted(pricePack,totalShip,discountPack,totalPrice,totalPromotion));
+        }else{
+            
+             System.out.println("""
+                PAGAR     %s
+                ENVIO     %S
+                DESCUENTO %S
+                ----------------
+                TOTAL      %s
+                ----------------
+                NO HAY PROMOCION
+                """.formatted(pricePack,totalShip,discountPack,totalPrice));
+        }
 
-       if(fullPrice>1000){
-        discount=0.1;
-       }else{
-        System.out.println("No se ha llegado, queda: " + (1000-fullPrice));
-       }
-       double extraDiscount=fullPrice-(fullPrice*discount);
-
-
-       System.out.println("""
-        Precio total  %.2f
-        Coste del envío %.2f
-        Descuento aplicado %.2f
-        ------------------------
-        Total de la compra %.2f
-        ------------------------
-        Total con la promoción %.2f
-               
-               """.formatted(totalPrice,totalShippment,totalDiscount,fullPrice,extraDiscount));
-
-
-
-
-
+        
     }
     
 }
