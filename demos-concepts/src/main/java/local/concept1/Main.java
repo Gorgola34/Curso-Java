@@ -1,4 +1,4 @@
-package local;
+package local.concept1;
 
 public class Main {
     public static void main(String[] args) {
