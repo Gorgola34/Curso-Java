@@ -9,7 +9,7 @@ public class StringRun {
     }
     public static String reverse(String name){
         String result="";
-        for(int i=name.length()-1;i>=0;i++){
+        for(int i=name.length()-1;i>=0;i--){
             result+=name.charAt(i);
 
         }
@@ -21,6 +21,7 @@ public class StringRun {
             if(name.charAt(i)==' '){
                 continue;
             }
+            result+=name.charAt(i);
         }
         return result;
     }
