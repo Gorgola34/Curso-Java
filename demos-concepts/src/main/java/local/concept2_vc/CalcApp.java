@@ -1,15 +1,16 @@
 package local.concept2_vc;
 
+import local.exceptions.BusinessException;
+
 public class CalcApp {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws BusinessException {
         System.out.println("Calculadora");
-
-        CalcView view = new CalcView();
-        CalcController controller= new CalcController();
+        CalcController controller = new CalcController();
+        CalcView view = new CalcView(controller);
         System.out.println(controller);
         System.out.println(view);
-
-}
+        view.show();
+    }
 
 }

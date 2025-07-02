@@ -1,21 +1,23 @@
 package Demos.OOP;
-import java.util.Scanner;
+import java.util.*;
 public class Map {
 
     public static void main(String[] args) {
 
-        Coordinates c= new Coordinates(0, 0, 0);
-        Coordinates c1= new Coordinates(12.4, 45.6, 89.0);
-        Scanner scanner= new Scanner(System.in);
-        System.out.println("Coordenadas:");
+        Coord c1= new Coord(0, 0, 0);
+        Coord c2=new Coord(120, 45, 60);
+        Scanner scanner=new Scanner(System.in);
+        System.out.println("Introduce x");
         int x=scanner.nextInt();
-        int y= scanner.nextInt();
+        System.out.println("Introduce y");
+        int y=scanner.nextInt();
+        System.out.println("Introduce z");
         int z=scanner.nextInt();
-        Coordinates c2= new Coordinates(x, y, z);
+        Coord c3= new Coord(x, y, z);
+        c1.show();
         c2.show();
-
+        c3.show();
         
     }
-
     
 }

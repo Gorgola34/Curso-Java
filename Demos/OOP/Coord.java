@@ -1,11 +1,11 @@
 package Demos.OOP;
-public class Coordinates {
+public class Coord {
 
-    double x;
-    double y;
-    double z;
+    int x;
+    int y;
+    int z;
 
-    public Coordinates(double x, double y, double z){
+    public Coord(int x,int y,int z){
         this.x=x;
         this.y=y;
         this.z=z;
@@ -19,4 +19,5 @@ public class Coordinates {
                 z:   %s
                 """.formatted(x,y,z));
     }
+    
 }
