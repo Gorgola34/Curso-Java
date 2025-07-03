@@ -16,10 +16,10 @@ public abstract class Pokemon {
         return name;
     }
 
-    public static void attack(){
+    public void attack(){
         System.out.println("Ataque rápido");
     }
-    public static void quickle(){
+    public void quickle(){
         System.out.println("Placaje");
     }
     

@@ -1,43 +1,22 @@
 package local.exceptions;
 
-//Checked exception
+// Checked Exception
 
 public class BusinessException extends Exception {
 
+    private static String generateMessage(ErrorCodes code, String message) {
+        return code + " - " + message;
+    }
+    
     ErrorCodes code;
 
-    BusinessException(ErrorCodes code, String message){
-        super(message);
-        this.code=code;
+    public BusinessException(ErrorCodes code, String message) {
+        super(generateMessage(code, message));
+        this.code = code;
     }
 
-    BusinessException(ErrorCodes code, String message, Throwable cause){
-        super(message,cause);
-        this.code=code;
+    public BusinessException(ErrorCodes code, String message, Throwable cause) {
+        super(generateMessage(code, message), cause);
+        this.code = code;
     }
-
-    private String generateMessage(){
-        return code + " " + getMessage();
-    }
-
-
 }
-enum ErrorCodes {
-        ERROR_EVEN("No se admiten numeros pares"), ERROR_NEGATIVE("No se admiten numeros negativos");
-
-        String message="";
-    
-
-    ErrorCodes(String message) {
-     this.message=message;
-
-    }
-
-    @Override
-    public String toString(){
-        return this.message;
-    }
-
-}
-
-

@@ -2,14 +2,14 @@ package Demos.ExtraExercises;
 import java.util.*;
 public class Exceptions5 {
 
-    public static int scannerby(){
+    public static double scannerby(){
         Scanner scanner= new Scanner(System.in);
-        int a=scanner.nextInt();
+        double a=scanner.nextInt();
         return a;
     }
-    public static int scannerBy2(){
+    public static double scannerBy2(){
         Scanner scanner=new Scanner(System.in);
-        int b=scanner.nextInt();
+        double b=scanner.nextInt();
         return b;
     }
     public static int divide(int a,int b){
@@ -32,8 +32,8 @@ public class Exceptions5 {
     }   
     
     public static void main(String[] args) {
-        int a=scannerby();
-        int b=scannerBy2();
+        int a=(int) scannerby();
+        int b=(int) scannerBy2();
         divide(a, b);
     }
     
