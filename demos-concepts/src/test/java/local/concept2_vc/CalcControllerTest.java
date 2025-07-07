@@ -1,16 +1,14 @@
 package local.concept2_vc;
 
-import static org.junit.Assert.assertArrayEquals;
-import static org.junit.Assert.assertEquals;
-
-import org.junit.Before;
-import org.junit.Test;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
 
 import local.exceptions.BusinessException;
 
 public class CalcControllerTest {
     // private CalcController cc;
-    @Before
+    @BeforeEach
     public void configure(){
          CalcController cc = new CalcController();
     }
@@ -37,6 +35,15 @@ public class CalcControllerTest {
         assertEquals(11,result);
                                                                                                                                                                               
     }
+   @Test
+   public void Add3(){
+    CalcController cc= new CalcController();
+    int num1=8;
+    int num2=10;
+    assertEquals(18,cc.addextra(num1,num2));
+
+   }
+    
     @Test
     public void testMultiply() {
         CalcController cc = new CalcController();
@@ -94,6 +101,14 @@ public class CalcControllerTest {
         CalcController cc= new CalcController();
         cc.setNum1(num1);
         assertEquals(120,cc.calculateFactorial());
+    }
+    @Test
+    public void testFactorialLambda() throws BusinessException {
+        CalcController cc = new CalcController();
+        int num1=5;
+        assertEquals(120, cc.factorialCalc(num1));
+
+
     }
 
 

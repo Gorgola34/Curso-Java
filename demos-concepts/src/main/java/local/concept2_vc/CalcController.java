@@ -23,7 +23,11 @@ public class CalcController extends Calc {
         int result = num1 + num2;
         return result;
     }
+    public int addextra(int num1,int num2){
+        int result=num1+num2;
+        return result;
 
+    }
 
     public int subtract() {
         int result = num1 - num2;
@@ -97,6 +101,14 @@ public class CalcController extends Calc {
             // result *= i;
         }
         return result;
+    }
+
+    public int factorialCalc(int num1){
+        int factor=1;
+        for(int i=factor; i<=num1;i++){
+            factor*=i;
+        }
+        return factor;
     }
 
 
