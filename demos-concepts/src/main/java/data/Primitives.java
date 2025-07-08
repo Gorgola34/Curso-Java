@@ -14,7 +14,18 @@ public class Primitives {
     public void foo (){
         s=byteNumber;
         byteNumber=(byte) s;
+        byteNumber=(byte) l;
         //byteNumber=(byte) bo; CASTING INCOMPATIBLE
+    }
+
+
+    public void wrappers(){
+        Integer iObj=1;
+        System.out.println(iObj.toString());
+    }
+    public static void main(String[] args) {
+        Primitives p= new Primitives();
+        p.wrappers();
     }
 
 }
