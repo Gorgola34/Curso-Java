@@ -4,6 +4,7 @@ public class ExcercisesList {
 
     public static void main(String[] args) {
         List<String> days= new ArrayList<>();
+        days.add("LUNES");
         days.add("Lunes");
         days.add("Martes");
         days.add("Miercoles");
@@ -25,12 +26,15 @@ public class ExcercisesList {
         for(String day:days){
             System.out.println(day);
         }
-        System.out.println(days.contains("Lunes"));
+        if((days.contains("Lunes"))|| (days.contains("LUNES"))){
+            System.out.println("Existe lunes");
+            Collections.sort(days);
+        System.out.println(days);
+        }
+        
+        }
+        //days.clear();
+        }
         
 
-        
-    }
 
-
-
-}
