@@ -1,7 +1,7 @@
 package com.cdsb.Files;
 import java.io.File;
 
-public class AppFull {
+public class Persistence {
 
     public static void folder(){
         File f= new File("Dir");

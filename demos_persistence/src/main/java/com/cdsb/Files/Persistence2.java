@@ -5,7 +5,7 @@ import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.util.*;
-public class AppUser {
+public class Persistence2 {
 
     public static String scannerby(){
         Scanner scanner= new Scanner(System.in);
