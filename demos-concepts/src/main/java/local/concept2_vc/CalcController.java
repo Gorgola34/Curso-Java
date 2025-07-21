@@ -19,16 +19,15 @@ public class CalcController extends Calc {
         int result = num1 + num2;
         return result;
     }
-     public int add(int num1,int num2) {
-        int result = num1 + num2;
-        return result;
-    }
-    public int addextra(int num1,int num2){
+    public int add(int num1,int num2){
         int result=num1+num2;
         return result;
 
     }
-
+    public int addExtra(int num1,int num2){
+        int result=num1 + num2;
+        return result;
+    }
     public int subtract() {
         int result = num1 - num2;
         return result;
@@ -103,14 +102,14 @@ public class CalcController extends Calc {
         return result;
     }
 
-    public int factorialCalc(int num1){
-        int factor=1;
-        for(int i=factor; i<=num1;i++){
-            factor*=i;
+    public int factorial(int num1){
+        int result=1;
+        for(int i=1;i<=num1;i++){
+            result*=i;
         }
-        return factor;
-    }
+        return result;
 
+    }
 
 
 }

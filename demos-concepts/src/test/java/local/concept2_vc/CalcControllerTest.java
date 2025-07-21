@@ -1,6 +1,8 @@
 package local.concept2_vc;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+
+import org.junit.experimental.theories.suppliers.TestedOn;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
@@ -13,9 +15,11 @@ public class CalcControllerTest {
          CalcController cc = new CalcController();
     }
     @Test
-    public void testAdd() {
-        CalcController cc = new CalcController();
-        assertEquals(0,cc.add());                                                                                                                                                                           
+    public void add(){
+        CalcController c= new CalcController();
+        int num1=3;
+        int num2=3;
+        assertEquals(6, c.add(num1,num2));
     }
    @Test
    public void AddTest(){
@@ -36,12 +40,11 @@ public class CalcControllerTest {
                                                                                                                                                                               
     }
    @Test
-   public void Add3(){
-    CalcController cc= new CalcController();
-    int num1=8;
-    int num2=10;
-    assertEquals(18,cc.addextra(num1,num2));
-
+   public void addExtra(){
+    CalcController c= new CalcController();
+    int num1=10;
+    int num2=30;
+    assertEquals(40,c.add(num1,num2));
    }
     
     @Test
@@ -103,13 +106,10 @@ public class CalcControllerTest {
         assertEquals(120,cc.calculateFactorial());
     }
     @Test
-    public void testFactorialLambda() throws BusinessException {
-        CalcController cc = new CalcController();
+    public void FactorialTest(){
+        CalcController c= new CalcController();
         int num1=5;
-        assertEquals(120, cc.factorialCalc(num1));
-
-
+        assertEquals(120,c.factorial(num1));
     }
-
-
-}
+    }
+    
