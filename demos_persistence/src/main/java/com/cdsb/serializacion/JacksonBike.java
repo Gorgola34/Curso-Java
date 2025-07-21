@@ -12,12 +12,12 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 public class JacksonBike {
 
     //SERIALIZAR
-    public static String toJSON(Bycicle [] Bycicle){
+    public static String toJSON(Bycicle [] Bycicles){
 
         ObjectMapper mapper= new ObjectMapper();
         String Jbikes="";
         try{
-              Jbikes=mapper.writeValueAsString(Bycicle);
+              Jbikes=mapper.writeValueAsString(Bycicles);
         }catch(JsonProcessingException e){
             System.out.println("Error");
         }
