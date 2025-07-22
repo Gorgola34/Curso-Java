@@ -8,15 +8,18 @@
           <!-- Proveedor de persistencia -->
           <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
           <!-- Clase de entidad principal -->
-          <class>local.domain.Meeting</class>
+          <class>local.entities.Meeting</class>
+          <class>local.entities.Room</class>
+          <class>local.entities.Record</class>
+          <class>local.entities.Person</class>
           <properties>
             <property name="jakarta.persistence.jdbc.driver" value="com.mysql.cj.jdbc.Driver"/>
             <property name="jakarta.persistence.schemma-generation.database.action" value="update"/>
             <!-- Los siguientes valores pueden definirse desde la aplicación -->
             <!-- url, user, passwd" -->
-            <property name="jakarta.persistence.jdbc.url" value="jdbc:mysql://localhost:3308/demo?useSSL=false&amp;serverTimezone=UTC"/>
+            <!-- <property name="jakarta.persistence.jdbc.url" value="jdbc:mysql://localhost:3308/demo?useSSL=false&amp;serverTimezone=UTC"/>
             <property name="jakarta.persistence.jdbc.user" value="root"/>
-            <property name="jakarta.persistence.jdbc.password" value="PASSWORD"/>
+            <property name="jakarta.persistence.jdbc.password" value="PASSWORD"/> -->
             <!-- Hibernate properties -->
             <property name="hibernate.hbm2ddl.auto" value="update"/>
             <property name="hibernate.show_sql" value="true"/>

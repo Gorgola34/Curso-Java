@@ -15,7 +15,7 @@ public class EntityManagerProvider {
 
  static {
 
-     entityManagerFactory=Persistence.createEntityManagerFactory(PERSISTENCE_UNIT);
+     entityManagerFactory=Persistence.createEntityManagerFactory(PERSISTENCE_UNIT, getProps());
 
 }
 
@@ -28,9 +28,7 @@ public static Map<String,String> getProps(){
     props.put("jakarta.persistence.jdbc.url", dotEnv.get("URL"));
     props.put("jakarta.persistence.jdbc.user",dotEnv.get("USER"));
     props.put("jakarta.persistence.jdbc.password",dotEnv.get("PASSWORD"));
-    dotEnv.get("URL");
-    dotEnv.get("USER");
-    dotEnv.get("PASSWORD");
+
     return props;
 }
 
