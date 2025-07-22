@@ -111,5 +111,14 @@ public class CalcController extends Calc {
 
     }
 
+    public int pow(int num1){
+        int result=1;
+        for(int i=1;i<=3;i++){
+            result*=num1;
+        }
+        return result;
+
+    }
+
 
 }

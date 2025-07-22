@@ -111,5 +111,18 @@ public class CalcControllerTest {
         int num1=5;
         assertEquals(120,c.factorial(num1));
     }
+    @Test
+    void testPow() {
+        CalcController c= new CalcController();
+        int num1=5;
+        assertEquals(125, c.pow(num1));
+        
+        
+    }
+
+   
+
+    
+
     }
     

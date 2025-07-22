@@ -38,5 +38,10 @@ public class Meeting {
         return "Meeting [id=" + id + ", description=" + description + ", date=" + date + "]";
     }
 
+    public void setDescription(String string) {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'setDescription'");
+    }
+
 
 }

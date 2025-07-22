@@ -12,6 +12,7 @@
           <class>local.entities.Room</class>
           <class>local.entities.Record</class>
           <class>local.entities.Person</class>
+          <class>local.entities.PersonX</class>
           <properties>
             <property name="jakarta.persistence.jdbc.driver" value="com.mysql.cj.jdbc.Driver"/>
             <property name="jakarta.persistence.schemma-generation.database.action" value="update"/>

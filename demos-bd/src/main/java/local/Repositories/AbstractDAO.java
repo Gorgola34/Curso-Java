@@ -13,56 +13,60 @@ import local.entities.Meeting;
 public abstract class AbstractDAO<E> implements DAO<E> {
 
 
-    EntityManager entityManager;
+   EntityManager entityManager;
     Class<E> entityClass;
 
-    public AbstractDAO(Class<E> entityClass, EntityManager entityManager){
-        entityManager=EntityManagerProvider.getEntityManager();
-        this.entityClass=entityClass;
-        this.entityManager=entityManager;
-
+    public AbstractDAO(Class<E> entityClass) {
+        entityManager = EntityManagerProvider.getEntityManager();
+        this.entityClass = entityClass;
     }
 
-    public AbstractDAO(EntityManager entityManager){
-        this.entityManager=entityManager;
-
-    }
-
-    public AbstractDAO(Class<Meeting> class1) {
-        //TODO Auto-generated constructor stub
+    public AbstractDAO(
+            Class<E> entityClass,
+            EntityManager entityManager) {
+        this.entityManager = entityManager;
+        this.entityClass = entityClass;
     }
 
     @Override
     public List<E> findAll() {
-        String finalSQL="FROM" + entityClass.getCanonicalName();
-        Query q= entityManager.createQuery(finalSQL);
-        return entityManager.createQuery(finalSQL,entityClass).getResultList();
+
+        String finalSQL = " FROM " + entityClass.getCanonicalName();
+        // Query q = entityManager.createQuery(finalSQL, entityClass);
+        // return (List<E>) q.getResultList();
+        return entityManager
+                .createQuery(finalSQL, entityClass)
+                .getResultList();
     }
 
     @Override
     public <ID> Optional<E> findById(ID id) {
-
-
+        // String finalSQL = " FROM " + entityClass.getCanonicalName()
+        // + " WHERE id = " + id;
         return Optional.ofNullable(entityManager.find(entityClass, id));
+
     }
 
     @Override
     public E save(E entity) {
+        entityManager.getTransaction().begin();
         entityManager.persist(entity);
+        entityManager.getTransaction().commit();
         return entity;
-
     }
+
     @Override
     public void update(E entity) {
-        
+        entityManager.getTransaction().begin();
         entityManager.merge(entity);
+        entityManager.getTransaction().commit();
+
     }
 
     @Override
     public void delete(E entity) {
+        entityManager.getTransaction().begin();
         entityManager.remove(entity);
-
-
+        entityManager.getTransaction().commit();
     }
-
 }
