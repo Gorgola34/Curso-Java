@@ -8,9 +8,9 @@ public class Library {
 
         Book.seekAuthor();
         System.out.println("----------");
-        System.out.println(Book.lend());
+        System.out.println(b1.lend());
         System.out.println("----------");
-       System.out.println(Book.returnBook());
+       System.out.println(b2.returnBook());
         System.out.println("----------");
         Book.showBooks();
     }

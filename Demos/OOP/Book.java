@@ -32,7 +32,7 @@ public class Book {
             }
         }
     }
-    public static boolean lend(){
+    public  boolean lend(){
         for(Book b:bookList){
             if(!b.isBorrowed){
                 b.isBorrowed=true;
@@ -41,7 +41,7 @@ public class Book {
         }
         return false;
     }
-    public static boolean returnBook(){
+    public  boolean returnBook(){
         for(Book b:bookList){
             if(b.isBorrowed){
                 b.isBorrowed=false;
