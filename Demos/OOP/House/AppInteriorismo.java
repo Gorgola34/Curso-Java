@@ -1,6 +1,6 @@
 package Demos.OOP.House;
 
-public class App {
+public class AppInteriorismo {
 
     public static void main(String[] args) {
         House h1= new House();
