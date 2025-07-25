@@ -1,4 +1,4 @@
-package Demos.Poke.Decidueye;
+package data.Generics;
 
 public abstract class Pokemon {
 
@@ -8,19 +8,14 @@ public abstract class Pokemon {
     public Pokemon(int id, String name){
         this.id=id;
         this.name=name;
-    }
 
+    }
     public int getId(){
         return id;
     }
     public String getName(){
         return name;
     }
-
-    public abstract void picotazo();
-        
-
-    public abstract void danzaPluma();
+    public abstract void hiperrayo();
        
-    }
-
+}

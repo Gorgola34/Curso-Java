@@ -1,4 +1,6 @@
 package Demos.Poke.Decidueye;
+
+
 public class Decidueye extends Pokemon implements IFantasma,Iplanta {
 
     private String type;
@@ -31,12 +33,18 @@ public class Decidueye extends Pokemon implements IFantasma,Iplanta {
     }
     @Override
     public void hojaAguda() {
-        System.out.println("Hoja Aguda");
+        System.out.println("Hoja aguda");
     }
     @Override
     public void puntadaSombria() {
-         System.out.println("Puntada Sombria");
+       System.out.println("Puntada sombria");
     }
-    
-
+    @Override
+     public  void picotazo(){
+        System.out.println("Picotazo");
+     }
+     @Override
+     public void danzaPluma(){
+        System.out.println("Danza Pluma");
+     }
 }
